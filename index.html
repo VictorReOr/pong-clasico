@@ -701,6 +701,7 @@ function crearPartidaOnline(intentos){
 }
  
 function conectarComoGuest(codigo){
+  modo = 'guest';
   mostrarVista('conectando', { codigo });
   peer = new Peer();
   peer.on('open', ()=>{
