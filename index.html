@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Clásico — Pong Mundial 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Special+Elite&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+  <script type="module" crossorigin src="./assets/index-CaMjS1M3.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DlhoVpe7.css">
+</head>
+<body>
+  <div id="wrap">
+    <div id="cabecera">
+      <div id="sunburst"></div>
+      <div id="eyebrow">Road to mundial 2030</div>
+      <h1 id="titulo">EL CLÁSICO PONG</h1>
+    </div>
+    <div id="marcador">
+      <div class="equipo esp">
+        <div class="nombre">España</div>
+        <div class="num" id="scoreEsp">0</div>
+        <div class="barra-energia"><div class="barra-fill" id="barraEsp"></div></div>
+      </div>
+      <div id="vs">FT.<div id="estadoConexion"></div></div>
+      <div class="equipo arg">
+        <div class="nombre">Argentina</div>
+        <div class="num" id="scoreArg">0</div>
+        <div class="barra-energia"><div class="barra-fill" id="barraArg"></div></div>
+      </div>
+    </div>
+    <div id="cancha-cont">
+      <canvas id="cancha" width="900" height="560"></canvas>
+      <div id="overlay"></div>
+    </div>
+    <div id="pie">
+      <span id="pieEsp">JUGADOR 1 · WASD</span>
+      <span id="pieCentro">ESPACIO = supertiro · ESC pausa</span>
+      <span id="pieArg">JUGADOR 2 · FLECHAS</span>
+    </div>
+  </div>
+
+</body>
+</html>
