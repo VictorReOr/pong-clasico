@@ -1,4 +1,3 @@
-import * as PeerModule from 'peerjs';
 import { state } from '../core/gameState.js';
 import { CONFIG } from '../config/gameConfig.js';
 import { TEAMS } from '../config/teams.js';
@@ -9,10 +8,9 @@ import { actualizarBarras, actualizarMarcador, actualizarTitulo, actualizarPie, 
 import { celebrarGol } from '../rendering/confetti.js';
 import { dispararEfectoSuper, reiniciarCargas } from '../core/superShot.js';
 
-// Fallback universal para PeerJS (funciona con Vite bundle y con script CDN en GitHub Pages)
-const Peer = (typeof window !== 'undefined' && window.Peer)
-  ? window.Peer
-  : (PeerModule.Peer || PeerModule.default || PeerModule);
+// PeerJS se carga via CDN desde index.html (<script src="https://unpkg.com/peerjs@1.5.4/...">)
+// Esto funciona en local con Vite y en producción en GitHub Pages sin ningún bundler.
+const Peer = window.Peer;
 
 export let peer = null;
 export let conn = null;
